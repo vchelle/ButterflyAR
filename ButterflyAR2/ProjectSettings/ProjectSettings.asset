@@ -7,12 +7,12 @@ PlayerSettings:
   productGUID: a00814407a7d540819aa855c3bec7cb4
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 2
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: mpdodson
-  productName: ButterflyAR6b
+  productName: ButterflyARbeta1
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -160,8 +160,9 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Standalone: com.mpdodson.ButterflyAR2
-    iOS: com.mpdodson.ButterflyAR7b
-  buildNumber: {}
+    iOS: com.mpdodson.ButterflyARbeta1
+  buildNumber:
+    iOS: 1
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
@@ -180,7 +181,7 @@ PlayerSettings:
     serializedVersion: 2
     m_Bits: 238
   iPhoneSdkVersion: 988
-  iOSTargetOSVersionString: 11.2
+  iOSTargetOSVersionString: 11.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 9.0
@@ -190,28 +191,28 @@ PlayerSettings:
   uIStatusBarHidden: 1
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
-  iPhoneSplashScreen: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f, type: 3}
-  iPhoneHighResSplashScreen: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f,
+  iPhoneSplashScreen: {fileID: 2800000, guid: c3311b0cecf364c6994ee148e5be08a6, type: 3}
+  iPhoneHighResSplashScreen: {fileID: 2800000, guid: ea82138ad0c3749dd8bf4363d7a1b3db,
     type: 3}
-  iPhoneTallHighResSplashScreen: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f,
+  iPhoneTallHighResSplashScreen: {fileID: 2800000, guid: ea82138ad0c3749dd8bf4363d7a1b3db,
     type: 3}
-  iPhone47inSplashScreen: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f,
+  iPhone47inSplashScreen: {fileID: 2800000, guid: c3311b0cecf364c6994ee148e5be08a6,
     type: 3}
-  iPhone55inPortraitSplashScreen: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f,
+  iPhone55inPortraitSplashScreen: {fileID: 2800000, guid: c3311b0cecf364c6994ee148e5be08a6,
     type: 3}
-  iPhone55inLandscapeSplashScreen: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f,
+  iPhone55inLandscapeSplashScreen: {fileID: 2800000, guid: c3311b0cecf364c6994ee148e5be08a6,
     type: 3}
-  iPhone58inPortraitSplashScreen: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f,
+  iPhone58inPortraitSplashScreen: {fileID: 2800000, guid: c3311b0cecf364c6994ee148e5be08a6,
     type: 3}
-  iPhone58inLandscapeSplashScreen: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f,
+  iPhone58inLandscapeSplashScreen: {fileID: 2800000, guid: c3311b0cecf364c6994ee148e5be08a6,
     type: 3}
-  iPadPortraitSplashScreen: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f,
+  iPadPortraitSplashScreen: {fileID: 2800000, guid: c3311b0cecf364c6994ee148e5be08a6,
     type: 3}
-  iPadHighResPortraitSplashScreen: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f,
+  iPadHighResPortraitSplashScreen: {fileID: 2800000, guid: c3311b0cecf364c6994ee148e5be08a6,
     type: 3}
-  iPadLandscapeSplashScreen: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f,
+  iPadLandscapeSplashScreen: {fileID: 2800000, guid: c3311b0cecf364c6994ee148e5be08a6,
     type: 3}
-  iPadHighResLandscapeSplashScreen: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f,
+  iPadHighResLandscapeSplashScreen: {fileID: 2800000, guid: c3311b0cecf364c6994ee148e5be08a6,
     type: 3}
   appleTVSplashScreen: {fileID: 0}
   appleTVSplashScreen2x: {fileID: 0}
@@ -273,7 +274,7 @@ PlayerSettings:
   - m_BuildTarget: iPhone
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f, type: 3}
+      m_Icon: {fileID: 2800000, guid: 313da15f77335455fbde6c4ad187dfed, type: 3}
       m_Width: 180
       m_Height: 180
       m_Kind: 0
@@ -363,14 +364,14 @@ PlayerSettings:
       m_Height: 20
       m_Kind: 2
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f, type: 3}
+      m_Icon: {fileID: 2800000, guid: c3311b0cecf364c6994ee148e5be08a6, type: 3}
       m_Width: 1024
       m_Height: 1024
       m_Kind: 4
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 1d810131f5f274ef68fbbd10ce7a782f, type: 3}
+      m_Icon: {fileID: 2800000, guid: ea82138ad0c3749dd8bf4363d7a1b3db, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

@@ -2491,7 +2491,6 @@ extern "C"  void Gizmos_DrawLine_m3273476787 (RuntimeObject * __this /* static, 
 extern "C"  void UsedAxis__ctor_m331859356 (UsedAxis_t1682297064 * __this, const RuntimeMethod* method)
 {
 	{
-		// class UsedAxis
 		Object__ctor_m297566312(__this, /*hidden argument*/NULL);
 		return;
 	}
@@ -2508,9 +2507,7 @@ extern "C"  void UsedAxis__ctor_m331859356 (UsedAxis_t1682297064 * __this, const
 extern "C"  void Waypoint__ctor_m182443051 (Waypoint_t1614450805 * __this, const RuntimeMethod* method)
 {
 	{
-		// //----------------------------------------------------------------------------------------------
 		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
-		// var radius: float = 0.25;   // Waypoint gizmo size
 		__this->set_radius_3((0.25f));
 		return;
 	}
@@ -2531,16 +2528,13 @@ extern "C"  void Waypoint_OnDrawGizmos_m1890594993 (Waypoint_t1614450805 * __thi
 	Vector3_t3722313464  V_2;
 	memset(&V_2, 0, sizeof(V_2));
 	{
-		// Gizmos.color = color;
 		Color_t2555686324  L_0 = __this->get_color_2();
 		Gizmos_set_color_m3399737545(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
-		// Gizmos.DrawSphere(transform.position, radius);
 		Transform_t3600365921 * L_1 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_1);
 		Vector3_t3722313464  L_2 = Transform_get_position_m36019626(L_1, /*hidden argument*/NULL);
 		float L_3 = __this->get_radius_3();
 		Gizmos_DrawSphere_m492648055(NULL /*static, unused*/, L_2, L_3, /*hidden argument*/NULL);
-		// if (iconName !="")
 		String_t* L_4 = __this->get_iconName_4();
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		String_t* L_5 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
@@ -2551,7 +2545,6 @@ extern "C"  void Waypoint_OnDrawGizmos_m1890594993 (Waypoint_t1614450805 * __thi
 		}
 	}
 	{
-		// Gizmos.DrawIcon (Vector3(transform.position.x, transform.position.y+radius*1.5, transform.position.z), iconName, true);
 		Transform_t3600365921 * L_7 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_7);
 		Vector3_t3722313464  L_8 = Transform_get_position_m36019626(L_7, /*hidden argument*/NULL);
@@ -2605,21 +2598,14 @@ extern "C"  void WaypointMover__ctor_m2463556371 (WaypointMover_t492995286 * __t
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// //----------------------------------------------------------------------------------
 		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
-		// var damping = 3.0;                                // Smooth facing/movement value
 		__this->set_damping_8((3.0f));
-		// var movementSpeed: float = 5.0;                    // Speed of object movement along the path
 		__this->set_movementSpeed_9((5.0f));
-		// var waypointActivationDistance: float = 1.0;    // How far should object be to waypoint for its activation and choosing new
 		__this->set_waypointActivationDistance_10((1.0f));
-		// private var direction: int = 1;
 		__this->set_direction_16(1);
-		// private var velocity = Vector3.zero;
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
 		Vector3_t3722313464  L_0 = Vector3_get_zero_m1409827619(NULL /*static, unused*/, /*hidden argument*/NULL);
 		__this->set_velocity_17(L_0);
-		// private var loopNumber: int = 1;
 		__this->set_loopNumber_20(1);
 		return;
 	}
@@ -2634,7 +2620,6 @@ extern "C"  RuntimeObject* WaypointMover_Start_m961304449 (WaypointMover_t492995
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// function Start ()
 		U24StartU2415_t1678141414 * L_0 = (U24StartU2415_t1678141414 *)il2cpp_codegen_object_new(U24StartU2415_t1678141414_il2cpp_TypeInfo_var);
 		U24StartU2415__ctor_m3585172406(L_0, __this, /*hidden argument*/NULL);
 		NullCheck(L_0);
@@ -2701,19 +2686,14 @@ extern "C"  void WaypointMover_Update_m888595589 (WaypointMover_t492995286 * __t
 	int32_t G_B31_0 = 0;
 	WaypointMover_t492995286 * G_B31_1 = NULL;
 	{
-		// var collisionPrevented: boolean = false;
 		V_0 = (bool)0;
-		// var hit : RaycastHit;
 		il2cpp_codegen_initobj((&V_1), sizeof(RaycastHit_t1056001966 ));
-		// var p1 : Vector3 = transform.position;
 		Transform_t3600365921 * L_0 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_0);
 		Vector3_t3722313464  L_1 = Transform_get_position_m36019626(L_0, /*hidden argument*/NULL);
 		V_2 = L_1;
-		// var p2 : Vector3 = p1;
 		Vector3_t3722313464  L_2 = V_2;
 		V_3 = L_2;
-		// if (preventCollisionDistance > 0)
 		float L_3 = __this->get_preventCollisionDistance_12();
 		if ((((float)L_3) <= ((float)(((float)((float)0))))))
 		{
@@ -2721,7 +2701,6 @@ extern "C"  void WaypointMover_Update_m888595589 (WaypointMover_t492995286 * __t
 		}
 	}
 	{
-		// if (Physics.CapsuleCast (p1, p2, 0.5, transform.forward, hit, preventCollisionDistance))
 		Vector3_t3722313464  L_4 = V_2;
 		Vector3_t3722313464  L_5 = V_3;
 		Transform_t3600365921 * L_6 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
@@ -2735,7 +2714,6 @@ extern "C"  void WaypointMover_Update_m888595589 (WaypointMover_t492995286 * __t
 		}
 	}
 	{
-		// if (!smoothCollisionPreventing) collisionPrevented = true;
 		bool L_10 = __this->get_smoothCollisionPreventing_13();
 		if (L_10)
 		{
@@ -2743,14 +2721,12 @@ extern "C"  void WaypointMover_Update_m888595589 (WaypointMover_t492995286 * __t
 		}
 	}
 	{
-		// if (!smoothCollisionPreventing) collisionPrevented = true;
 		V_0 = (bool)1;
 		goto IL_00a0;
 	}
 
 IL_005b:
 	{
-		// movementSpeed = initialMovementSpeed * Vector3.Distance(transform.position, hit.point) / preventCollisionDistance;
 		float L_11 = __this->get_initialMovementSpeed_24();
 		Transform_t3600365921 * L_12 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_12);
@@ -2760,7 +2736,6 @@ IL_005b:
 		float L_15 = Vector3_Distance_m886789632(NULL /*static, unused*/, L_13, L_14, /*hidden argument*/NULL);
 		float L_16 = __this->get_preventCollisionDistance_12();
 		__this->set_movementSpeed_9(((float)((float)((float)il2cpp_codegen_multiply((float)L_11, (float)L_15))/(float)L_16)));
-		// if (movementSpeed < initialMovementSpeed/preventCollisionDistance) collisionPrevented = true;
 		float L_17 = __this->get_movementSpeed_9();
 		float L_18 = __this->get_initialMovementSpeed_24();
 		float L_19 = __this->get_preventCollisionDistance_12();
@@ -2770,7 +2745,6 @@ IL_005b:
 		}
 	}
 	{
-		// if (movementSpeed < initialMovementSpeed/preventCollisionDistance) collisionPrevented = true;
 		V_0 = (bool)1;
 	}
 
@@ -2781,14 +2755,12 @@ IL_00a0:
 
 IL_00a5:
 	{
-		// movementSpeed = initialMovementSpeed;
 		float L_20 = __this->get_initialMovementSpeed_24();
 		__this->set_movementSpeed_9(L_20);
 	}
 
 IL_00b1:
 	{
-		// if (dynamicWaypointsUpdate  &&  currentWaypoint >= 0)
 		bool L_21 = __this->get_dynamicWaypointsUpdate_14();
 		if (!L_21)
 		{
@@ -2803,7 +2775,6 @@ IL_00b1:
 		}
 	}
 	{
-		// if(targetPosition != waypointsHolder.waypoints[currentWaypoint].gameObject.transform.position)
 		Vector3_t3722313464  L_23 = __this->get_targetPosition_18();
 		WaypointsHolder_t3313439174 * L_24 = __this->get_waypointsHolder_2();
 		NullCheck(L_24);
@@ -2826,7 +2797,6 @@ IL_00b1:
 		}
 	}
 	{
-		// targetPosition = waypointsHolder.waypoints[currentWaypoint].gameObject.transform.position;
 		WaypointsHolder_t3313439174 * L_33 = __this->get_waypointsHolder_2();
 		NullCheck(L_33);
 		WaypointU5BU5D_t1069915672* L_34 = L_33->get_waypoints_3();
@@ -2841,12 +2811,10 @@ IL_00b1:
 		NullCheck(L_39);
 		Vector3_t3722313464  L_40 = Transform_get_position_m36019626(L_39, /*hidden argument*/NULL);
 		__this->set_targetPosition_18(L_40);
-		// transform.LookAt(targetPosition);
 		Transform_t3600365921 * L_41 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		Vector3_t3722313464  L_42 = __this->get_targetPosition_18();
 		NullCheck(L_41);
 		Transform_LookAt_m3649447396(L_41, L_42, /*hidden argument*/NULL);
-		// targetPosition = IgnorePositionByAxis(targetPosition);
 		Vector3_t3722313464  L_43 = __this->get_targetPosition_18();
 		Vector3_t3722313464  L_44 = VirtFuncInvoker1< Vector3_t3722313464 , Vector3_t3722313464  >::Invoke(15 /* UnityEngine.Vector3 WaypointMover::IgnorePositionByAxis(UnityEngine.Vector3) */, __this, L_43);
 		__this->set_targetPosition_18(L_44);
@@ -2854,7 +2822,6 @@ IL_00b1:
 
 IL_0143:
 	{
-		// if (!suspended  &&  !collisionPrevented  &&  currentWaypoint >= 0  &&  delayTillTime < Time.time)
 		bool L_45 = __this->get_suspended_22();
 		if (L_45)
 		{
@@ -2884,9 +2851,7 @@ IL_0143:
 		}
 	}
 	{
-		// inMove = true;
 		__this->set_inMove_21((bool)1);
-		// if(Vector3.Distance(transform.position, targetPosition) < waypointActivationDistance)
 		Transform_t3600365921 * L_50 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_50);
 		Vector3_t3722313464  L_51 = Transform_get_position_m36019626(L_50, /*hidden argument*/NULL);
@@ -2900,7 +2865,6 @@ IL_0143:
 		}
 	}
 	{
-		// if (waypointsHolder.waypoints[currentWaypoint].delay>0) delayTillTime = Time.time + waypointsHolder.waypoints[currentWaypoint].delay;
 		WaypointsHolder_t3313439174 * L_55 = __this->get_waypointsHolder_2();
 		NullCheck(L_55);
 		WaypointU5BU5D_t1069915672* L_56 = L_55->get_waypoints_3();
@@ -2916,7 +2880,6 @@ IL_0143:
 		}
 	}
 	{
-		// if (waypointsHolder.waypoints[currentWaypoint].delay>0) delayTillTime = Time.time + waypointsHolder.waypoints[currentWaypoint].delay;
 		float L_61 = Time_get_time_m2907476221(NULL /*static, unused*/, /*hidden argument*/NULL);
 		WaypointsHolder_t3313439174 * L_62 = __this->get_waypointsHolder_2();
 		NullCheck(L_62);
@@ -2932,7 +2895,6 @@ IL_0143:
 
 IL_01d9:
 	{
-		// if (waypointsHolder.waypoints[currentWaypoint].callFunction != "") SendMessage (waypointsHolder.waypoints[currentWaypoint].callFunction, SendMessageOptions.DontRequireReceiver);
 		WaypointsHolder_t3313439174 * L_68 = __this->get_waypointsHolder_2();
 		NullCheck(L_68);
 		WaypointU5BU5D_t1069915672* L_69 = L_68->get_waypoints_3();
@@ -2951,7 +2913,6 @@ IL_01d9:
 		}
 	}
 	{
-		// if (waypointsHolder.waypoints[currentWaypoint].callFunction != "") SendMessage (waypointsHolder.waypoints[currentWaypoint].callFunction, SendMessageOptions.DontRequireReceiver);
 		WaypointsHolder_t3313439174 * L_76 = __this->get_waypointsHolder_2();
 		NullCheck(L_76);
 		WaypointU5BU5D_t1069915672* L_77 = L_76->get_waypoints_3();
@@ -2966,7 +2927,6 @@ IL_01d9:
 
 IL_021d:
 	{
-		// if(waypointsHolder.waypoints[currentWaypoint].newMoverSpeed > 0) ChangeWaypointMoverSpeed(waypointsHolder.waypoints[currentWaypoint].newMoverSpeed);
 		WaypointsHolder_t3313439174 * L_82 = __this->get_waypointsHolder_2();
 		NullCheck(L_82);
 		WaypointU5BU5D_t1069915672* L_83 = L_82->get_waypoints_3();
@@ -2982,7 +2942,6 @@ IL_021d:
 		}
 	}
 	{
-		// if(waypointsHolder.waypoints[currentWaypoint].newMoverSpeed > 0) ChangeWaypointMoverSpeed(waypointsHolder.waypoints[currentWaypoint].newMoverSpeed);
 		WaypointsHolder_t3313439174 * L_88 = __this->get_waypointsHolder_2();
 		NullCheck(L_88);
 		WaypointU5BU5D_t1069915672* L_89 = L_88->get_waypoints_3();
@@ -2997,16 +2956,12 @@ IL_021d:
 
 IL_0258:
 	{
-		// previousWaypoint = currentWaypoint;
 		int32_t L_94 = __this->get_currentWaypoint_15();
 		__this->set_previousWaypoint_23(L_94);
-		// currentWaypoint += direction;
 		int32_t L_95 = __this->get_currentWaypoint_15();
 		int32_t L_96 = __this->get_direction_16();
 		__this->set_currentWaypoint_15(((int32_t)il2cpp_codegen_add((int32_t)L_95, (int32_t)L_96)));
-		// onWaypoint = true;
 		__this->set_onWaypoint_26((bool)1);
-		// if(currentWaypoint > waypointsHolder.waypoints.Length-1 || currentWaypoint<0)
 		int32_t L_97 = __this->get_currentWaypoint_15();
 		WaypointsHolder_t3313439174 * L_98 = __this->get_waypointsHolder_2();
 		NullCheck(L_98);
@@ -3028,7 +2983,6 @@ IL_0258:
 
 IL_02a7:
 	{
-		// switch (loopingType)
 		int32_t L_102 = __this->get_loopingType_4();
 		V_4 = L_102;
 		int32_t L_103 = V_4;
@@ -3038,7 +2992,6 @@ IL_02a7:
 		}
 	}
 	{
-		// currentWaypoint = -1;
 		__this->set_currentWaypoint_15((-1));
 		goto IL_0366;
 	}
@@ -3052,7 +3005,6 @@ IL_02c3:
 		}
 	}
 	{
-		// currentWaypoint = currentWaypoint < 0 ? waypointsHolder.waypoints.Length-1 : 0;
 		int32_t L_105 = __this->get_currentWaypoint_15();
 		G_B29_0 = __this;
 		if ((((int32_t)L_105) >= ((int32_t)0)))
@@ -3094,10 +3046,8 @@ IL_02fa:
 		}
 	}
 	{
-		// direction = -direction;
 		int32_t L_110 = __this->get_direction_16();
 		__this->set_direction_16(((-L_110)));
-		// currentWaypoint += direction;
 		int32_t L_111 = __this->get_currentWaypoint_15();
 		int32_t L_112 = __this->get_direction_16();
 		__this->set_currentWaypoint_15(((int32_t)il2cpp_codegen_add((int32_t)L_111, (int32_t)L_112)));
@@ -3113,7 +3063,6 @@ IL_0327:
 		}
 	}
 	{
-		// if (loopNumber < numberOfLoops)
 		int32_t L_114 = __this->get_loopNumber_20();
 		int32_t L_115 = __this->get_numberOfLoops_11();
 		if ((((int32_t)L_114) >= ((int32_t)L_115)))
@@ -3122,9 +3071,7 @@ IL_0327:
 		}
 	}
 	{
-		// currentWaypoint = 0;
 		__this->set_currentWaypoint_15(0);
-		// loopNumber++;
 		int32_t L_116 = __this->get_loopNumber_20();
 		__this->set_loopNumber_20(((int32_t)il2cpp_codegen_add((int32_t)L_116, (int32_t)1)));
 		goto IL_0361;
@@ -3132,19 +3079,16 @@ IL_0327:
 
 IL_035a:
 	{
-		// currentWaypoint = -1;
 		__this->set_currentWaypoint_15((-1));
 	}
 
 IL_0361:
 	{
-		// switch (loopingType)
 		goto IL_0366;
 	}
 
 IL_0366:
 	{
-		// if(currentWaypoint >= 0 && waypointsHolder.waypoints[currentWaypoint])
 		int32_t L_117 = __this->get_currentWaypoint_15();
 		if ((((int32_t)L_117) < ((int32_t)0)))
 		{
@@ -3167,7 +3111,6 @@ IL_0366:
 		}
 	}
 	{
-		// targetPosition = waypointsHolder.waypoints[currentWaypoint].gameObject.transform.position;
 		WaypointsHolder_t3313439174 * L_124 = __this->get_waypointsHolder_2();
 		NullCheck(L_124);
 		WaypointU5BU5D_t1069915672* L_125 = L_124->get_waypoints_3();
@@ -3182,7 +3125,6 @@ IL_0366:
 		NullCheck(L_130);
 		Vector3_t3722313464  L_131 = Transform_get_position_m36019626(L_130, /*hidden argument*/NULL);
 		__this->set_targetPosition_18(L_131);
-		// targetPosition = IgnorePositionByAxis(targetPosition);
 		Vector3_t3722313464  L_132 = __this->get_targetPosition_18();
 		Vector3_t3722313464  L_133 = VirtFuncInvoker1< Vector3_t3722313464 , Vector3_t3722313464  >::Invoke(15 /* UnityEngine.Vector3 WaypointMover::IgnorePositionByAxis(UnityEngine.Vector3) */, __this, L_132);
 		__this->set_targetPosition_18(L_133);
@@ -3191,7 +3133,6 @@ IL_0366:
 
 IL_03cc:
 	{
-		// if (currentWaypoint < waypointsHolder.waypoints.Length && currentWaypoint>=0)
 		int32_t L_134 = __this->get_currentWaypoint_15();
 		WaypointsHolder_t3313439174 * L_135 = __this->get_waypointsHolder_2();
 		NullCheck(L_135);
@@ -3211,11 +3152,9 @@ IL_03cc:
 		}
 	}
 	{
-		// currentWaypoint -= direction;
 		int32_t L_139 = __this->get_currentWaypoint_15();
 		int32_t L_140 = __this->get_direction_16();
 		__this->set_currentWaypoint_15(((int32_t)il2cpp_codegen_subtract((int32_t)L_139, (int32_t)L_140)));
-		// Debug.LogWarning("Waypoint is missed in " + waypointsHolder.gameObject.name);
 		WaypointsHolder_t3313439174 * L_141 = __this->get_waypointsHolder_2();
 		NullCheck(L_141);
 		GameObject_t1113636619 * L_142 = Component_get_gameObject_m442555142(L_141, /*hidden argument*/NULL);
@@ -3229,16 +3168,13 @@ IL_03cc:
 
 IL_0425:
 	{
-		// callExitFunction = true;
 		__this->set_callExitFunction_25((bool)1);
 		goto IL_04ca;
 	}
 
 IL_0431:
 	{
-		// onWaypoint = false;
 		__this->set_onWaypoint_26((bool)0);
-		// if(waypointsHolder.waypoints[previousWaypoint].callExitFunction != ""  &&  callExitFunction)
 		WaypointsHolder_t3313439174 * L_145 = __this->get_waypointsHolder_2();
 		NullCheck(L_145);
 		WaypointU5BU5D_t1069915672* L_146 = L_145->get_waypoints_3();
@@ -3264,7 +3200,6 @@ IL_0431:
 		}
 	}
 	{
-		// if(Vector3.Distance(transform.position, waypointsHolder.waypoints[previousWaypoint].gameObject.transform.position) < waypointActivationDistance)
 		Transform_t3600365921 * L_154 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_154);
 		Vector3_t3722313464  L_155 = Transform_get_position_m36019626(L_154, /*hidden argument*/NULL);
@@ -3290,7 +3225,6 @@ IL_0431:
 		}
 	}
 	{
-		// SendMessage (waypointsHolder.waypoints[previousWaypoint].callExitFunction, SendMessageOptions.DontRequireReceiver);
 		WaypointsHolder_t3313439174 * L_166 = __this->get_waypointsHolder_2();
 		NullCheck(L_166);
 		WaypointU5BU5D_t1069915672* L_167 = L_166->get_waypoints_3();
@@ -3301,13 +3235,11 @@ IL_0431:
 		NullCheck(L_170);
 		String_t* L_171 = L_170->get_callExitFunction_7();
 		Component_SendMessage_m1441147224(__this, L_171, 1, /*hidden argument*/NULL);
-		// callExitFunction = false;
 		__this->set_callExitFunction_25((bool)0);
 	}
 
 IL_04ca:
 	{
-		// if (followingType == FollowType.SmoothFacing)
 		int32_t L_172 = __this->get_followingType_3();
 		if ((!(((uint32_t)L_172) == ((uint32_t)2))))
 		{
@@ -3315,7 +3247,6 @@ IL_04ca:
 		}
 	}
 	{
-		// var rotation = Quaternion.LookRotation(targetPosition - transform.position);
 		Vector3_t3722313464  L_173 = __this->get_targetPosition_18();
 		Transform_t3600365921 * L_174 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_174);
@@ -3325,7 +3256,6 @@ IL_04ca:
 		IL2CPP_RUNTIME_CLASS_INIT(Quaternion_t2301928331_il2cpp_TypeInfo_var);
 		Quaternion_t2301928331  L_177 = Quaternion_LookRotation_m4040767668(NULL /*static, unused*/, L_176, /*hidden argument*/NULL);
 		V_5 = L_177;
-		// transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
 		Transform_t3600365921 * L_178 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		Transform_t3600365921 * L_179 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_179);
@@ -3336,7 +3266,6 @@ IL_04ca:
 		Quaternion_t2301928331  L_184 = Quaternion_Slerp_m1234055455(NULL /*static, unused*/, L_180, L_181, ((float)il2cpp_codegen_multiply((float)L_182, (float)L_183)), /*hidden argument*/NULL);
 		NullCheck(L_178);
 		Transform_set_rotation_m3524318132(L_178, L_184, /*hidden argument*/NULL);
-		// transform.Translate(Vector3.forward*movementSpeed*Time.deltaTime);
 		Transform_t3600365921 * L_185 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		Vector3_t3722313464  L_186 = Vector3_get_forward_m3100859705(NULL /*static, unused*/, /*hidden argument*/NULL);
 		float L_187 = __this->get_movementSpeed_9();
@@ -3349,7 +3278,6 @@ IL_04ca:
 
 IL_0541:
 	{
-		// if (followingType == FollowType.Facing)
 		int32_t L_191 = __this->get_followingType_3();
 		if ((!(((uint32_t)L_191) == ((uint32_t)1))))
 		{
@@ -3357,12 +3285,10 @@ IL_0541:
 		}
 	}
 	{
-		// transform.LookAt(targetPosition);
 		Transform_t3600365921 * L_192 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		Vector3_t3722313464  L_193 = __this->get_targetPosition_18();
 		NullCheck(L_192);
 		Transform_LookAt_m3649447396(L_192, L_193, /*hidden argument*/NULL);
-		// transform.Translate(Vector3.forward*movementSpeed*Time.deltaTime);
 		Transform_t3600365921 * L_194 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
 		Vector3_t3722313464  L_195 = Vector3_get_forward_m3100859705(NULL /*static, unused*/, /*hidden argument*/NULL);
@@ -3376,7 +3302,6 @@ IL_0541:
 
 IL_0583:
 	{
-		// if (followingType == FollowType.InvertedFacing)
 		int32_t L_200 = __this->get_followingType_3();
 		if ((!(((uint32_t)L_200) == ((uint32_t)8))))
 		{
@@ -3384,18 +3309,15 @@ IL_0583:
 		}
 	}
 	{
-		// transform.LookAt(targetPosition);
 		Transform_t3600365921 * L_201 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		Vector3_t3722313464  L_202 = __this->get_targetPosition_18();
 		NullCheck(L_201);
 		Transform_LookAt_m3649447396(L_201, L_202, /*hidden argument*/NULL);
-		// transform.Rotate(Vector3.up, 180);
 		Transform_t3600365921 * L_203 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
 		Vector3_t3722313464  L_204 = Vector3_get_up_m3584168373(NULL /*static, unused*/, /*hidden argument*/NULL);
 		NullCheck(L_203);
 		Transform_Rotate_m1749346957(L_203, L_204, (((float)((float)((int32_t)180)))), /*hidden argument*/NULL);
-		// transform.Translate(-Vector3.forward*movementSpeed*Time.deltaTime);
 		Transform_t3600365921 * L_205 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		Vector3_t3722313464  L_206 = Vector3_get_forward_m3100859705(NULL /*static, unused*/, /*hidden argument*/NULL);
 		Vector3_t3722313464  L_207 = Vector3_op_UnaryNegation_m1951478815(NULL /*static, unused*/, L_206, /*hidden argument*/NULL);
@@ -3409,7 +3331,6 @@ IL_0583:
 
 IL_05e0:
 	{
-		// if (followingType == FollowType.Simple)  transform.position = Vector3.MoveTowards(transform.position, targetPosition, movementSpeed * Time.deltaTime);
 		int32_t L_212 = __this->get_followingType_3();
 		if ((!(((uint32_t)L_212) == ((uint32_t)0))))
 		{
@@ -3417,7 +3338,6 @@ IL_05e0:
 		}
 	}
 	{
-		// if (followingType == FollowType.Simple)  transform.position = Vector3.MoveTowards(transform.position, targetPosition, movementSpeed * Time.deltaTime);
 		Transform_t3600365921 * L_213 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		Transform_t3600365921 * L_214 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_214);
@@ -3433,7 +3353,6 @@ IL_05e0:
 
 IL_0619:
 	{
-		// if (followingType == FollowType.SmoothDamping) transform.position = Vector3.SmoothDamp(transform.position, targetPosition, velocity, movementSpeed);
 		int32_t L_220 = __this->get_followingType_3();
 		if ((!(((uint32_t)L_220) == ((uint32_t)3))))
 		{
@@ -3441,7 +3360,6 @@ IL_0619:
 		}
 	}
 	{
-		// if (followingType == FollowType.SmoothDamping) transform.position = Vector3.SmoothDamp(transform.position, targetPosition, velocity, movementSpeed);
 		Transform_t3600365921 * L_221 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		Transform_t3600365921 * L_222 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_222);
@@ -3457,7 +3375,6 @@ IL_0619:
 
 IL_0652:
 	{
-		// if (followingType == FollowType.Simple2D)
 		int32_t L_228 = __this->get_followingType_3();
 		if ((!(((uint32_t)L_228) == ((uint32_t)4))))
 		{
@@ -3465,14 +3382,12 @@ IL_0652:
 		}
 	}
 	{
-		// SmoothLookAt2D(transform, targetPosition, damping);
 		Transform_t3600365921 * L_229 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		Vector3_t3722313464  L_230 = __this->get_targetPosition_18();
 		IL2CPP_RUNTIME_CLASS_INIT(Vector2_t2156229523_il2cpp_TypeInfo_var);
 		Vector2_t2156229523  L_231 = Vector2_op_Implicit_m4260192859(NULL /*static, unused*/, L_230, /*hidden argument*/NULL);
 		float L_232 = __this->get_damping_8();
 		VirtActionInvoker3< Transform_t3600365921 *, Vector2_t2156229523 , float >::Invoke(16 /* System.Void WaypointMover::SmoothLookAt2D(UnityEngine.Transform,UnityEngine.Vector2,System.Single) */, __this, L_229, L_231, L_232);
-		// transform.Translate(Vector3.right * movementSpeed * Time.deltaTime);
 		Transform_t3600365921 * L_233 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
 		Vector3_t3722313464  L_234 = Vector3_get_right_m1913784872(NULL /*static, unused*/, /*hidden argument*/NULL);
@@ -3486,7 +3401,6 @@ IL_0652:
 
 IL_06a0:
 	{
-		// if (followingType == FollowType.Facing2D)
 		int32_t L_239 = __this->get_followingType_3();
 		if ((!(((uint32_t)L_239) == ((uint32_t)5))))
 		{
@@ -3494,7 +3408,6 @@ IL_06a0:
 		}
 	}
 	{
-		// var targetDir = targetPosition - transform.position;
 		Vector3_t3722313464  L_240 = __this->get_targetPosition_18();
 		Transform_t3600365921 * L_241 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_241);
@@ -3502,14 +3415,12 @@ IL_06a0:
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
 		Vector3_t3722313464  L_243 = Vector3_op_Subtraction_m3073674971(NULL /*static, unused*/, L_240, L_242, /*hidden argument*/NULL);
 		V_6 = L_243;
-		// var angle = Vector3.Angle(targetDir, transform.right);
 		Vector3_t3722313464  L_244 = V_6;
 		Transform_t3600365921 * L_245 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_245);
 		Vector3_t3722313464  L_246 = Transform_get_right_m2535262102(L_245, /*hidden argument*/NULL);
 		float L_247 = Vector3_Angle_m3731191531(NULL /*static, unused*/, L_244, L_246, /*hidden argument*/NULL);
 		V_7 = L_247;
-		// if(angle > 3) transform.rotation.eulerAngles.z += angle;
 		float L_248 = V_7;
 		if ((((float)L_248) <= ((float)(((float)((float)3))))))
 		{
@@ -3517,7 +3428,6 @@ IL_06a0:
 		}
 	}
 	{
-		// if(angle > 3) transform.rotation.eulerAngles.z += angle;
 		Transform_t3600365921 * L_249 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_249);
 		Quaternion_t2301928331  L_250 = Transform_get_rotation_m3502953881(L_249, /*hidden argument*/NULL);
@@ -3557,7 +3467,6 @@ IL_06a0:
 
 IL_0750:
 	{
-		// transform.Translate(Vector3.right * movementSpeed * Time.deltaTime);
 		Transform_t3600365921 * L_270 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
 		Vector3_t3722313464  L_271 = Vector3_get_right_m1913784872(NULL /*static, unused*/, /*hidden argument*/NULL);
@@ -3571,7 +3480,6 @@ IL_0750:
 
 IL_0775:
 	{
-		// if (followingType == FollowType.SmoothFacing2D)
 		int32_t L_276 = __this->get_followingType_3();
 		if ((!(((uint32_t)L_276) == ((uint32_t)6))))
 		{
@@ -3579,7 +3487,6 @@ IL_0775:
 		}
 	}
 	{
-		// targetDir = targetPosition - transform.position;
 		Vector3_t3722313464  L_277 = __this->get_targetPosition_18();
 		Transform_t3600365921 * L_278 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_278);
@@ -3587,14 +3494,12 @@ IL_0775:
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
 		Vector3_t3722313464  L_280 = Vector3_op_Subtraction_m3073674971(NULL /*static, unused*/, L_277, L_279, /*hidden argument*/NULL);
 		V_6 = L_280;
-		// angle = Vector3.Angle(targetDir, transform.right);
 		Vector3_t3722313464  L_281 = V_6;
 		Transform_t3600365921 * L_282 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_282);
 		Vector3_t3722313464  L_283 = Transform_get_right_m2535262102(L_282, /*hidden argument*/NULL);
 		float L_284 = Vector3_Angle_m3731191531(NULL /*static, unused*/, L_281, L_283, /*hidden argument*/NULL);
 		V_7 = L_284;
-		// if(angle > 3)
 		float L_285 = V_7;
 		if ((((float)L_285) <= ((float)(((float)((float)3))))))
 		{
@@ -3602,7 +3507,6 @@ IL_0775:
 		}
 	}
 	{
-		// transform.rotation.eulerAngles.z = Mathf.Lerp(transform.rotation.eulerAngles.z, transform.rotation.eulerAngles.z - angle, damping * Time.deltaTime);
 		Transform_t3600365921 * L_286 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_286);
 		Quaternion_t2301928331  L_287 = Transform_get_rotation_m3502953881(L_286, /*hidden argument*/NULL);
@@ -3653,7 +3557,6 @@ IL_0775:
 
 IL_0853:
 	{
-		// transform.Translate(Vector3.right * movementSpeed * Time.deltaTime);
 		Transform_t3600365921 * L_314 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
 		Vector3_t3722313464  L_315 = Vector3_get_right_m1913784872(NULL /*static, unused*/, /*hidden argument*/NULL);
@@ -3667,7 +3570,6 @@ IL_0853:
 
 IL_0878:
 	{
-		// if (followingType == FollowType.Teleport)  transform.position = targetPosition;
 		int32_t L_320 = __this->get_followingType_3();
 		if ((!(((uint32_t)L_320) == ((uint32_t)7))))
 		{
@@ -3675,7 +3577,6 @@ IL_0878:
 		}
 	}
 	{
-		// if (followingType == FollowType.Teleport)  transform.position = targetPosition;
 		Transform_t3600365921 * L_321 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		Vector3_t3722313464  L_322 = __this->get_targetPosition_18();
 		NullCheck(L_321);
@@ -3689,7 +3590,6 @@ IL_0895:
 
 IL_089a:
 	{
-		// inMove = false;
 		__this->set_inMove_21((bool)0);
 	}
 
@@ -3706,13 +3606,10 @@ extern "C"  void WaypointMover_ReverseDirection_m14530025 (WaypointMover_t492995
 	int32_t G_B3_0 = 0;
 	WaypointMover_t492995286 * G_B3_1 = NULL;
 	{
-		// previousWaypoint = currentWaypoint;
 		int32_t L_0 = __this->get_currentWaypoint_15();
 		__this->set_previousWaypoint_23(L_0);
-		// direction = -direction;
 		int32_t L_1 = __this->get_direction_16();
 		__this->set_direction_16(((-L_1)));
-		// currentWaypoint =  direction > 0 ? currentWaypoint+1 : currentWaypoint-1;
 		int32_t L_2 = __this->get_direction_16();
 		G_B1_0 = __this;
 		if ((((int32_t)L_2) <= ((int32_t)0)))
@@ -3739,7 +3636,6 @@ IL_003b:
 	{
 		NullCheck(G_B3_1);
 		G_B3_1->set_currentWaypoint_15(G_B3_0);
-		// if (currentWaypoint < 0) currentWaypoint =  waypointsHolder.waypoints.Length-1;
 		int32_t L_5 = __this->get_currentWaypoint_15();
 		if ((((int32_t)L_5) >= ((int32_t)0)))
 		{
@@ -3747,7 +3643,6 @@ IL_003b:
 		}
 	}
 	{
-		// if (currentWaypoint < 0) currentWaypoint =  waypointsHolder.waypoints.Length-1;
 		WaypointsHolder_t3313439174 * L_6 = __this->get_waypointsHolder_2();
 		NullCheck(L_6);
 		WaypointU5BU5D_t1069915672* L_7 = L_6->get_waypoints_3();
@@ -3759,7 +3654,6 @@ IL_003b:
 
 IL_0069:
 	{
-		// if (currentWaypoint > waypointsHolder.waypoints.Length-1) currentWaypoint = 0;
 		int32_t L_9 = __this->get_currentWaypoint_15();
 		WaypointsHolder_t3313439174 * L_10 = __this->get_waypointsHolder_2();
 		NullCheck(L_10);
@@ -3772,13 +3666,11 @@ IL_0069:
 		}
 	}
 	{
-		// if (currentWaypoint > waypointsHolder.waypoints.Length-1) currentWaypoint = 0;
 		__this->set_currentWaypoint_15(0);
 	}
 
 IL_008d:
 	{
-		// targetPosition = waypointsHolder.waypoints[currentWaypoint].gameObject.transform.position;
 		WaypointsHolder_t3313439174 * L_13 = __this->get_waypointsHolder_2();
 		NullCheck(L_13);
 		WaypointU5BU5D_t1069915672* L_14 = L_13->get_waypoints_3();
@@ -3804,13 +3696,10 @@ extern "C"  void WaypointMover_SetDirection_m980022799 (WaypointMover_t492995286
 	int32_t G_B3_0 = 0;
 	WaypointMover_t492995286 * G_B3_1 = NULL;
 	{
-		// previousWaypoint = currentWaypoint;
 		int32_t L_0 = __this->get_currentWaypoint_15();
 		__this->set_previousWaypoint_23(L_0);
-		// direction = dir;
 		int32_t L_1 = ___dir0;
 		__this->set_direction_16(L_1);
-		// currentWaypoint =  direction > 0 ? currentWaypoint+1 : currentWaypoint-1;
 		int32_t L_2 = __this->get_direction_16();
 		G_B1_0 = __this;
 		if ((((int32_t)L_2) <= ((int32_t)0)))
@@ -3837,7 +3726,6 @@ IL_0035:
 	{
 		NullCheck(G_B3_1);
 		G_B3_1->set_currentWaypoint_15(G_B3_0);
-		// if (currentWaypoint < 0) currentWaypoint =  waypointsHolder.waypoints.Length-1;
 		int32_t L_5 = __this->get_currentWaypoint_15();
 		if ((((int32_t)L_5) >= ((int32_t)0)))
 		{
@@ -3845,7 +3733,6 @@ IL_0035:
 		}
 	}
 	{
-		// if (currentWaypoint < 0) currentWaypoint =  waypointsHolder.waypoints.Length-1;
 		WaypointsHolder_t3313439174 * L_6 = __this->get_waypointsHolder_2();
 		NullCheck(L_6);
 		WaypointU5BU5D_t1069915672* L_7 = L_6->get_waypoints_3();
@@ -3857,7 +3744,6 @@ IL_0035:
 
 IL_0063:
 	{
-		// if (currentWaypoint > waypointsHolder.waypoints.Length-1) currentWaypoint = 0;
 		int32_t L_9 = __this->get_currentWaypoint_15();
 		WaypointsHolder_t3313439174 * L_10 = __this->get_waypointsHolder_2();
 		NullCheck(L_10);
@@ -3870,13 +3756,11 @@ IL_0063:
 		}
 	}
 	{
-		// if (currentWaypoint > waypointsHolder.waypoints.Length-1) currentWaypoint = 0;
 		__this->set_currentWaypoint_15(0);
 	}
 
 IL_0087:
 	{
-		// targetPosition = waypointsHolder.waypoints[currentWaypoint].gameObject.transform.position;
 		WaypointsHolder_t3313439174 * L_13 = __this->get_waypointsHolder_2();
 		NullCheck(L_13);
 		WaypointU5BU5D_t1069915672* L_14 = L_13->get_waypoints_3();
@@ -3898,7 +3782,6 @@ IL_0087:
 extern "C"  bool WaypointMover_IsOnWaypoint_m2096804539 (WaypointMover_t492995286 * __this, const RuntimeMethod* method)
 {
 	{
-		// return onWaypoint;
 		bool L_0 = __this->get_onWaypoint_26();
 		return L_0;
 	}
@@ -3907,10 +3790,8 @@ extern "C"  bool WaypointMover_IsOnWaypoint_m2096804539 (WaypointMover_t49299528
 extern "C"  void WaypointMover_ReturnToPreviousWaypoint_m406051823 (WaypointMover_t492995286 * __this, const RuntimeMethod* method)
 {
 	{
-		// currentWaypoint = previousWaypoint;
 		int32_t L_0 = __this->get_previousWaypoint_23();
 		__this->set_currentWaypoint_15(L_0);
-		// transform.position = waypointsHolder.waypoints[previousWaypoint].gameObject.transform.position;
 		Transform_t3600365921 * L_1 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		WaypointsHolder_t3313439174 * L_2 = __this->get_waypointsHolder_2();
 		NullCheck(L_2);
@@ -3927,7 +3808,6 @@ extern "C"  void WaypointMover_ReturnToPreviousWaypoint_m406051823 (WaypointMove
 		Vector3_t3722313464  L_9 = Transform_get_position_m36019626(L_8, /*hidden argument*/NULL);
 		NullCheck(L_1);
 		Transform_set_position_m3387557959(L_1, L_9, /*hidden argument*/NULL);
-		// targetPosition = waypointsHolder.waypoints[previousWaypoint].gameObject.transform.position;
 		WaypointsHolder_t3313439174 * L_10 = __this->get_waypointsHolder_2();
 		NullCheck(L_10);
 		WaypointU5BU5D_t1069915672* L_11 = L_10->get_waypoints_3();
@@ -3949,7 +3829,6 @@ extern "C"  void WaypointMover_ReturnToPreviousWaypoint_m406051823 (WaypointMove
 extern "C"  bool WaypointMover_isMoving_m1938984450 (WaypointMover_t492995286 * __this, const RuntimeMethod* method)
 {
 	{
-		// return inMove;
 		bool L_0 = __this->get_inMove_21();
 		return L_0;
 	}
@@ -3958,7 +3837,6 @@ extern "C"  bool WaypointMover_isMoving_m1938984450 (WaypointMover_t492995286 * 
 extern "C"  void WaypointMover_Suspend_m187153646 (WaypointMover_t492995286 * __this, bool ___state0, const RuntimeMethod* method)
 {
 	{
-		// suspended = state;
 		bool L_0 = ___state0;
 		__this->set_suspended_22(L_0);
 		return;
@@ -3968,7 +3846,6 @@ extern "C"  void WaypointMover_Suspend_m187153646 (WaypointMover_t492995286 * __
 extern "C"  void WaypointMover_Pause_m3741388681 (WaypointMover_t492995286 * __this, const RuntimeMethod* method)
 {
 	{
-		// suspended = true;
 		__this->set_suspended_22((bool)1);
 		return;
 	}
@@ -3977,7 +3854,6 @@ extern "C"  void WaypointMover_Pause_m3741388681 (WaypointMover_t492995286 * __t
 extern "C"  void WaypointMover_Unpause_m3163514651 (WaypointMover_t492995286 * __this, const RuntimeMethod* method)
 {
 	{
-		// suspended = false;
 		__this->set_suspended_22((bool)0);
 		return;
 	}
@@ -3986,10 +3862,8 @@ extern "C"  void WaypointMover_Unpause_m3163514651 (WaypointMover_t492995286 * _
 extern "C"  void WaypointMover_ChangeWaypointMoverSpeed_m352096516 (WaypointMover_t492995286 * __this, float ___newSpeed0, const RuntimeMethod* method)
 {
 	{
-		// movementSpeed = newSpeed;
 		float L_0 = ___newSpeed0;
 		__this->set_movementSpeed_9(L_0);
-		// initialMovementSpeed = movementSpeed;
 		float L_1 = __this->get_movementSpeed_9();
 		__this->set_initialMovementSpeed_24(L_1);
 		return;
@@ -4007,10 +3881,8 @@ extern "C"  Vector3_t3722313464  WaypointMover_IgnorePositionByAxis_m2580620123 
 	Vector3_t3722313464  V_3;
 	memset(&V_3, 0, sizeof(V_3));
 	{
-		// var updatedPos: Vector3 = positionToUpdate;
 		Vector3_t3722313464  L_0 = ___positionToUpdate0;
 		V_0 = L_0;
-		// if (ignorePositionAtAxis.x) updatedPos.x = transform.position.x;
 		UsedAxis_t1682297064 * L_1 = __this->get_ignorePositionAtAxis_7();
 		NullCheck(L_1);
 		bool L_2 = L_1->get_x_0();
@@ -4020,7 +3892,6 @@ extern "C"  Vector3_t3722313464  WaypointMover_IgnorePositionByAxis_m2580620123 
 		}
 	}
 	{
-		// if (ignorePositionAtAxis.x) updatedPos.x = transform.position.x;
 		Transform_t3600365921 * L_3 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_3);
 		Vector3_t3722313464  L_4 = Transform_get_position_m36019626(L_3, /*hidden argument*/NULL);
@@ -4031,7 +3902,6 @@ extern "C"  Vector3_t3722313464  WaypointMover_IgnorePositionByAxis_m2580620123 
 
 IL_002c:
 	{
-		// if (ignorePositionAtAxis.y) updatedPos.y = transform.position.y;
 		UsedAxis_t1682297064 * L_6 = __this->get_ignorePositionAtAxis_7();
 		NullCheck(L_6);
 		bool L_7 = L_6->get_y_1();
@@ -4041,7 +3911,6 @@ IL_002c:
 		}
 	}
 	{
-		// if (ignorePositionAtAxis.y) updatedPos.y = transform.position.y;
 		Transform_t3600365921 * L_8 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_8);
 		Vector3_t3722313464  L_9 = Transform_get_position_m36019626(L_8, /*hidden argument*/NULL);
@@ -4052,7 +3921,6 @@ IL_002c:
 
 IL_0056:
 	{
-		// if (ignorePositionAtAxis.z) updatedPos.z = transform.position.z;
 		UsedAxis_t1682297064 * L_11 = __this->get_ignorePositionAtAxis_7();
 		NullCheck(L_11);
 		bool L_12 = L_11->get_z_2();
@@ -4062,7 +3930,6 @@ IL_0056:
 		}
 	}
 	{
-		// if (ignorePositionAtAxis.z) updatedPos.z = transform.position.z;
 		Transform_t3600365921 * L_13 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_13);
 		Vector3_t3722313464  L_14 = Transform_get_position_m36019626(L_13, /*hidden argument*/NULL);
@@ -4073,7 +3940,6 @@ IL_0056:
 
 IL_0080:
 	{
-		// return updatedPos;
 		Vector3_t3722313464  L_16 = V_0;
 		return L_16;
 	}
@@ -4091,7 +3957,6 @@ extern "C"  void WaypointMover_SmoothLookAt2D_m2909215025 (WaypointMover_t492995
 	memset(&V_0, 0, sizeof(V_0));
 	float V_1 = 0.0f;
 	{
-		// var relative : Vector3  = objectTransform.InverseTransformPoint(targetPosition);
 		Transform_t3600365921 * L_0 = ___objectTransform0;
 		Vector2_t2156229523  L_1 = ___targetPosition1;
 		IL2CPP_RUNTIME_CLASS_INIT(Vector2_t2156229523_il2cpp_TypeInfo_var);
@@ -4099,13 +3964,11 @@ extern "C"  void WaypointMover_SmoothLookAt2D_m2909215025 (WaypointMover_t492995
 		NullCheck(L_0);
 		Vector3_t3722313464  L_3 = Transform_InverseTransformPoint_m1343916000(L_0, L_2, /*hidden argument*/NULL);
 		V_0 = L_3;
-		// var angle : float = Mathf.Atan2(relative.y, relative.x) * Mathf.Rad2Deg;
 		float L_4 = (&V_0)->get_y_2();
 		float L_5 = (&V_0)->get_x_1();
 		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
 		float L_6 = atan2f(L_4, L_5);
 		V_1 = ((float)il2cpp_codegen_multiply((float)L_6, (float)(57.29578f)));
-		// objectTransform.Rotate (0, 0, Mathf.LerpAngle(0, angle, Time.deltaTime * smoothingValue) );
 		Transform_t3600365921 * L_7 = ___objectTransform0;
 		float L_8 = V_1;
 		float L_9 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
@@ -4141,7 +4004,6 @@ extern "C"  void U24StartU2415__ctor_m3585172406 (U24StartU2415_t1678141414 * __
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// function Start ()
 		GenericGenerator_1__ctor_m3668034686(__this, /*hidden argument*/GenericGenerator_1__ctor_m3668034686_RuntimeMethod_var);
 		WaypointMover_t492995286 * L_0 = ___self_0;
 		__this->set_U24self_U2422_0(L_0);
@@ -4158,7 +4020,6 @@ extern "C"  RuntimeObject* U24StartU2415_GetEnumerator_m2388058835 (U24StartU241
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// function Start ()
 		WaypointMover_t492995286 * L_0 = __this->get_U24self_U2422_0();
 		U24_t3290484354 * L_1 = (U24_t3290484354 *)il2cpp_codegen_object_new(U24_t3290484354_il2cpp_TypeInfo_var);
 		U24__ctor_m569500378(L_1, L_0, /*hidden argument*/NULL);
@@ -4220,7 +4081,6 @@ extern "C"  bool U24_MoveNext_m1996041879 (U24_t3290484354 * __this, const Runti
 
 IL_0017:
 	{
-		// if (GetComponent.<Rigidbody>()) GetComponent.<Rigidbody>().freezeRotation = true;
 		WaypointMover_t492995286 * L_1 = __this->get_U24self_U2421_7();
 		NullCheck(L_1);
 		Rigidbody_t3916780224 * L_2 = Component_GetComponent_TisRigidbody_t3916780224_m279685075(L_1, /*hidden argument*/Component_GetComponent_TisRigidbody_t3916780224_m279685075_RuntimeMethod_var);
@@ -4232,7 +4092,6 @@ IL_0017:
 		}
 	}
 	{
-		// if (GetComponent.<Rigidbody>()) GetComponent.<Rigidbody>().freezeRotation = true;
 		WaypointMover_t492995286 * L_4 = __this->get_U24self_U2421_7();
 		NullCheck(L_4);
 		Rigidbody_t3916780224 * L_5 = Component_GetComponent_TisRigidbody_t3916780224_m279685075(L_4, /*hidden argument*/Component_GetComponent_TisRigidbody_t3916780224_m279685075_RuntimeMethod_var);
@@ -4242,14 +4101,12 @@ IL_0017:
 
 IL_003d:
 	{
-		// initialMovementSpeed = movementSpeed;
 		WaypointMover_t492995286 * L_6 = __this->get_U24self_U2421_7();
 		WaypointMover_t492995286 * L_7 = __this->get_U24self_U2421_7();
 		NullCheck(L_7);
 		float L_8 = L_7->get_movementSpeed_9();
 		NullCheck(L_6);
 		L_6->set_initialMovementSpeed_24(L_8);
-		// yield WaitForSeconds(0.01);
 		WaitForSeconds_t1699091251 * L_9 = (WaitForSeconds_t1699091251 *)il2cpp_codegen_object_new(WaitForSeconds_t1699091251_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m2199082655(L_9, (0.01f), /*hidden argument*/NULL);
 		bool L_10 = GenericGeneratorEnumerator_1_Yield_m2392643255(__this, 2, L_9, /*hidden argument*/GenericGeneratorEnumerator_1_Yield_m2392643255_RuntimeMethod_var);
@@ -4259,7 +4116,6 @@ IL_003d:
 
 IL_0069:
 	{
-		// if(StartFromNearestWaypoint)
 		WaypointMover_t492995286 * L_11 = __this->get_U24self_U2421_7();
 		NullCheck(L_11);
 		bool L_12 = L_11->get_StartFromNearestWaypoint_6();
@@ -4269,25 +4125,19 @@ IL_0069:
 		}
 	}
 	{
-		// var waypointPosition: Vector3;
 		Vector3_t3722313464 * L_13 = __this->get_address_of_U24waypointPositionU2416_2();
 		il2cpp_codegen_initobj(L_13, sizeof(Vector3_t3722313464 ));
-		// var nearestWaypointID: int;
 		int32_t* L_14 = __this->get_address_of_U24nearestWaypointIDU2417_3();
 		il2cpp_codegen_initobj(L_14, sizeof(int32_t));
-		// var previousSmallestDistance: float = Mathf.Infinity;
 		__this->set_U24previousSmallestDistanceU2418_4((std::numeric_limits<float>::infinity()));
-		// var distance: float;
 		float* L_15 = __this->get_address_of_U24distanceU2419_5();
 		il2cpp_codegen_initobj(L_15, sizeof(float));
-		// for (var i:int = 0; i < waypointsHolder.waypoints.Length; i++)
 		__this->set_U24iU2420_6(0);
 		goto IL_014f;
 	}
 
 IL_00b4:
 	{
-		// waypointPosition = waypointsHolder.waypoints[i].gameObject.transform.position;
 		WaypointMover_t492995286 * L_16 = __this->get_U24self_U2421_7();
 		NullCheck(L_16);
 		WaypointsHolder_t3313439174 * L_17 = L_16->get_waypointsHolder_2();
@@ -4304,13 +4154,11 @@ IL_00b4:
 		NullCheck(L_23);
 		Vector3_t3722313464  L_24 = Transform_get_position_m36019626(L_23, /*hidden argument*/NULL);
 		__this->set_U24waypointPositionU2416_2(L_24);
-		// waypointPosition = IgnorePositionByAxis(waypointPosition);
 		WaypointMover_t492995286 * L_25 = __this->get_U24self_U2421_7();
 		Vector3_t3722313464  L_26 = __this->get_U24waypointPositionU2416_2();
 		NullCheck(L_25);
 		Vector3_t3722313464  L_27 = VirtFuncInvoker1< Vector3_t3722313464 , Vector3_t3722313464  >::Invoke(15 /* UnityEngine.Vector3 WaypointMover::IgnorePositionByAxis(UnityEngine.Vector3) */, L_25, L_26);
 		__this->set_U24waypointPositionU2416_2(L_27);
-		// distance = Vector3.Distance(transform.position, waypointPosition);
 		WaypointMover_t492995286 * L_28 = __this->get_U24self_U2421_7();
 		NullCheck(L_28);
 		Transform_t3600365921 * L_29 = Component_get_transform_m3162698980(L_28, /*hidden argument*/NULL);
@@ -4320,7 +4168,6 @@ IL_00b4:
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
 		float L_32 = Vector3_Distance_m886789632(NULL /*static, unused*/, L_30, L_31, /*hidden argument*/NULL);
 		__this->set_U24distanceU2419_5(L_32);
-		// if (distance < previousSmallestDistance)
 		float L_33 = __this->get_U24distanceU2419_5();
 		float L_34 = __this->get_U24previousSmallestDistanceU2418_4();
 		if ((((float)L_33) >= ((float)L_34)))
@@ -4329,24 +4176,20 @@ IL_00b4:
 		}
 	}
 	{
-		// nearestWaypointID = i;
 		int32_t L_35 = __this->get_U24iU2420_6();
 		__this->set_U24nearestWaypointIDU2417_3(L_35);
-		// previousSmallestDistance = distance;
 		float L_36 = __this->get_U24distanceU2419_5();
 		__this->set_U24previousSmallestDistanceU2418_4(L_36);
 	}
 
 IL_0141:
 	{
-		// for (var i:int = 0; i < waypointsHolder.waypoints.Length; i++)
 		int32_t L_37 = __this->get_U24iU2420_6();
 		__this->set_U24iU2420_6(((int32_t)il2cpp_codegen_add((int32_t)L_37, (int32_t)1)));
 	}
 
 IL_014f:
 	{
-		// for (var i:int = 0; i < waypointsHolder.waypoints.Length; i++)
 		int32_t L_38 = __this->get_U24iU2420_6();
 		WaypointMover_t492995286 * L_39 = __this->get_U24self_U2421_7();
 		NullCheck(L_39);
@@ -4361,7 +4204,6 @@ IL_014f:
 		}
 	}
 	{
-		// currentWaypoint = nearestWaypointID;
 		WaypointMover_t492995286 * L_43 = __this->get_U24self_U2421_7();
 		int32_t L_44 = __this->get_U24nearestWaypointIDU2417_3();
 		NullCheck(L_43);
@@ -4371,7 +4213,6 @@ IL_014f:
 
 IL_0185:
 	{
-		// else currentWaypoint = 0;
 		WaypointMover_t492995286 * L_45 = __this->get_U24self_U2421_7();
 		NullCheck(L_45);
 		L_45->set_currentWaypoint_15(0);
@@ -4379,7 +4220,6 @@ IL_0185:
 
 IL_0191:
 	{
-		// if(MoveOnWayImmediately) transform.position = waypointsHolder.waypoints[currentWaypoint].gameObject.transform.position;
 		WaypointMover_t492995286 * L_46 = __this->get_U24self_U2421_7();
 		NullCheck(L_46);
 		bool L_47 = L_46->get_MoveOnWayImmediately_5();
@@ -4389,7 +4229,6 @@ IL_0191:
 		}
 	}
 	{
-		// if(MoveOnWayImmediately) transform.position = waypointsHolder.waypoints[currentWaypoint].gameObject.transform.position;
 		WaypointMover_t492995286 * L_48 = __this->get_U24self_U2421_7();
 		NullCheck(L_48);
 		Transform_t3600365921 * L_49 = Component_get_transform_m3162698980(L_48, /*hidden argument*/NULL);
@@ -4416,7 +4255,6 @@ IL_0191:
 
 IL_01dc:
 	{
-		// targetPosition = waypointsHolder.waypoints[currentWaypoint].gameObject.transform.position;
 		WaypointMover_t492995286 * L_60 = __this->get_U24self_U2421_7();
 		WaypointMover_t492995286 * L_61 = __this->get_U24self_U2421_7();
 		NullCheck(L_61);
@@ -4437,7 +4275,6 @@ IL_01dc:
 		Vector3_t3722313464  L_70 = Transform_get_position_m36019626(L_69, /*hidden argument*/NULL);
 		NullCheck(L_60);
 		L_60->set_targetPosition_18(L_70);
-		// targetPosition = IgnorePositionByAxis(targetPosition);
 		WaypointMover_t492995286 * L_71 = __this->get_U24self_U2421_7();
 		WaypointMover_t492995286 * L_72 = __this->get_U24self_U2421_7();
 		WaypointMover_t492995286 * L_73 = __this->get_U24self_U2421_7();
@@ -4447,7 +4284,6 @@ IL_01dc:
 		Vector3_t3722313464  L_75 = VirtFuncInvoker1< Vector3_t3722313464 , Vector3_t3722313464  >::Invoke(15 /* UnityEngine.Vector3 WaypointMover::IgnorePositionByAxis(UnityEngine.Vector3) */, L_72, L_74);
 		NullCheck(L_71);
 		L_71->set_targetPosition_18(L_75);
-		// function Start ()
 		GenericGeneratorEnumerator_1_YieldDefault_m3906696236(__this, 1, /*hidden argument*/GenericGeneratorEnumerator_1_YieldDefault_m3906696236_RuntimeMethod_var);
 	}
 
@@ -4473,14 +4309,11 @@ IL_023c:
 extern "C"  void WaypointsHolder__ctor_m3849348123 (WaypointsHolder_t3313439174 * __this, const RuntimeMethod* method)
 {
 	{
-		// //----------------------------------------------------------------------------------------------
 		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
-		// var color: Color = Color(0,1,0, 0.5);     // Debug path lines color
 		Color_t2555686324  L_0;
 		memset(&L_0, 0, sizeof(L_0));
 		Color__ctor_m2943235014((&L_0), (((float)((float)0))), (((float)((float)1))), (((float)((float)0))), (0.5f), /*hidden argument*/NULL);
 		__this->set_color_2(L_0);
-		// var colorizeWaypoints: boolean = true;    // Repaint all waypoints in the color
 		__this->set_colorizeWaypoints_4((bool)1);
 		return;
 	}
@@ -4501,7 +4334,6 @@ extern "C"  void WaypointsHolder_Start_m634307809 (WaypointsHolder_t3313439174 *
 	ComponentU5BU5D_t3294940482* V_4 = NULL;
 	int32_t V_5 = 0;
 	{
-		// if (waypoints.Length == 0)
 		WaypointU5BU5D_t1069915672* L_0 = __this->get_waypoints_3();
 		NullCheck((RuntimeArray *)(RuntimeArray *)L_0);
 		int32_t L_1 = Array_get_Length_m21610649((RuntimeArray *)(RuntimeArray *)L_0, /*hidden argument*/NULL);
@@ -4511,7 +4343,6 @@ extern "C"  void WaypointsHolder_Start_m634307809 (WaypointsHolder_t3313439174 *
 		}
 	}
 	{
-		// waypoints = new Array(transform.childCount);
 		Transform_t3600365921 * L_2 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		NullCheck(L_2);
 		int32_t L_3 = Transform_get_childCount_m3145433196(L_2, /*hidden argument*/NULL);
@@ -4523,18 +4354,14 @@ extern "C"  void WaypointsHolder_Start_m634307809 (WaypointsHolder_t3313439174 *
 		NullCheck(L_4);
 		RuntimeArray * L_7 = Array_ToBuiltin_m286161891(L_4, L_6, /*hidden argument*/NULL);
 		__this->set_waypoints_3(((WaypointU5BU5D_t1069915672*)Castclass((RuntimeObject*)L_7, WaypointU5BU5D_t1069915672_il2cpp_TypeInfo_var)));
-		// var childrenWaypoints: Component[] = GetComponentsInChildren (Waypoint);
 		RuntimeTypeHandle_t3027515415  L_8 = { reinterpret_cast<intptr_t> (Waypoint_t1614450805_0_0_0_var) };
 		Type_t * L_9 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, L_8, /*hidden argument*/NULL);
 		ComponentU5BU5D_t3294940482* L_10 = Component_GetComponentsInChildren_m4100240514(__this, L_9, /*hidden argument*/NULL);
 		V_0 = L_10;
-		// var i: int = 0;
 		V_1 = 0;
-		// for (var waypoint : Waypoint in childrenWaypoints)
 		V_3 = 0;
 		ComponentU5BU5D_t3294940482* L_11 = V_0;
 		V_4 = L_11;
-		// for (var waypoint : Waypoint in childrenWaypoints)
 		ComponentU5BU5D_t3294940482* L_12 = V_4;
 		NullCheck((RuntimeArray *)(RuntimeArray *)L_12);
 		int32_t L_13 = Array_get_Length_m21610649((RuntimeArray *)(RuntimeArray *)L_12, /*hidden argument*/NULL);
@@ -4544,7 +4371,6 @@ extern "C"  void WaypointsHolder_Start_m634307809 (WaypointsHolder_t3313439174 *
 
 IL_0060:
 	{
-		// waypoints[i] = waypoint;
 		WaypointU5BU5D_t1069915672* L_14 = __this->get_waypoints_3();
 		int32_t L_15 = V_1;
 		ComponentU5BU5D_t3294940482* L_16 = V_4;
@@ -4555,7 +4381,6 @@ IL_0060:
 		NullCheck(L_14);
 		ArrayElementTypeCheck (L_14, ((Waypoint_t1614450805 *)CastclassClass((RuntimeObject*)L_19, Waypoint_t1614450805_il2cpp_TypeInfo_var)));
 		(L_14)->SetAt(static_cast<il2cpp_array_size_t>(L_15), (Waypoint_t1614450805 *)((Waypoint_t1614450805 *)CastclassClass((RuntimeObject*)L_19, Waypoint_t1614450805_il2cpp_TypeInfo_var)));
-		// i++;
 		int32_t L_20 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add((int32_t)L_20, (int32_t)1));
 		int32_t L_21 = V_3;
@@ -4588,7 +4413,6 @@ extern "C"  void WaypointsHolder_AddWaypoint_m2765870964 (WaypointsHolder_t33134
 	}
 	Array_t201190492 * V_0 = NULL;
 	{
-		// if (waypoints.Length == 0)  waypoints = new Array(0);
 		WaypointU5BU5D_t1069915672* L_0 = __this->get_waypoints_3();
 		NullCheck((RuntimeArray *)(RuntimeArray *)L_0);
 		int32_t L_1 = Array_get_Length_m21610649((RuntimeArray *)(RuntimeArray *)L_0, /*hidden argument*/NULL);
@@ -4598,7 +4422,6 @@ extern "C"  void WaypointsHolder_AddWaypoint_m2765870964 (WaypointsHolder_t33134
 		}
 	}
 	{
-		// if (waypoints.Length == 0)  waypoints = new Array(0);
 		Array_t201190492 * L_2 = (Array_t201190492 *)il2cpp_codegen_object_new(Array_t201190492_il2cpp_TypeInfo_var);
 		Array__ctor_m2555122516(L_2, 0, /*hidden argument*/NULL);
 		RuntimeTypeHandle_t3027515415  L_3 = { reinterpret_cast<intptr_t> (Waypoint_t1614450805_0_0_0_var) };
@@ -4611,19 +4434,16 @@ extern "C"  void WaypointsHolder_AddWaypoint_m2765870964 (WaypointsHolder_t33134
 
 IL_0030:
 	{
-		// var array = new Array (waypoints);
 		WaypointU5BU5D_t1069915672* L_6 = __this->get_waypoints_3();
 		Array_t201190492 * L_7 = (Array_t201190492 *)il2cpp_codegen_object_new(Array_t201190492_il2cpp_TypeInfo_var);
 		Array__ctor_m2237513838(L_7, (RuntimeObject*)(RuntimeObject*)L_6, /*hidden argument*/NULL);
 		V_0 = L_7;
-		// array.length++;
 		Array_t201190492 * L_8 = V_0;
 		Array_t201190492 * L_9 = V_0;
 		NullCheck(L_9);
 		int32_t L_10 = Array_get_length_m219024605(L_9, /*hidden argument*/NULL);
 		NullCheck(L_8);
 		Array_set_length_m3735173719(L_8, ((int32_t)il2cpp_codegen_add((int32_t)L_10, (int32_t)1)), /*hidden argument*/NULL);
-		// waypoints = array.ToBuiltin(Waypoint) as Waypoint[];
 		Array_t201190492 * L_11 = V_0;
 		RuntimeTypeHandle_t3027515415  L_12 = { reinterpret_cast<intptr_t> (Waypoint_t1614450805_0_0_0_var) };
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
@@ -4631,7 +4451,6 @@ IL_0030:
 		NullCheck(L_11);
 		RuntimeArray * L_14 = Array_ToBuiltin_m286161891(L_11, L_13, /*hidden argument*/NULL);
 		__this->set_waypoints_3(((WaypointU5BU5D_t1069915672*)IsInst((RuntimeObject*)L_14, WaypointU5BU5D_t1069915672_il2cpp_TypeInfo_var)));
-		// if (waypoints.Length > 1) waypoints[waypoints.Length - 1] = new Waypoint();
 		WaypointU5BU5D_t1069915672* L_15 = __this->get_waypoints_3();
 		NullCheck((RuntimeArray *)(RuntimeArray *)L_15);
 		int32_t L_16 = Array_get_Length_m21610649((RuntimeArray *)(RuntimeArray *)L_15, /*hidden argument*/NULL);
@@ -4641,7 +4460,6 @@ IL_0030:
 		}
 	}
 	{
-		// if (waypoints.Length > 1) waypoints[waypoints.Length - 1] = new Waypoint();
 		WaypointU5BU5D_t1069915672* L_17 = __this->get_waypoints_3();
 		WaypointU5BU5D_t1069915672* L_18 = __this->get_waypoints_3();
 		NullCheck((RuntimeArray *)(RuntimeArray *)L_18);
@@ -4669,7 +4487,6 @@ extern "C"  void WaypointsHolder_DeleteWaypoint_m3108876766 (WaypointsHolder_t33
 	}
 	Array_t201190492 * V_0 = NULL;
 	{
-		// if (waypoints.Length > 0)
 		WaypointU5BU5D_t1069915672* L_0 = __this->get_waypoints_3();
 		NullCheck((RuntimeArray *)(RuntimeArray *)L_0);
 		int32_t L_1 = Array_get_Length_m21610649((RuntimeArray *)(RuntimeArray *)L_0, /*hidden argument*/NULL);
@@ -4679,19 +4496,16 @@ extern "C"  void WaypointsHolder_DeleteWaypoint_m3108876766 (WaypointsHolder_t33
 		}
 	}
 	{
-		// var array = new Array (waypoints);
 		WaypointU5BU5D_t1069915672* L_2 = __this->get_waypoints_3();
 		Array_t201190492 * L_3 = (Array_t201190492 *)il2cpp_codegen_object_new(Array_t201190492_il2cpp_TypeInfo_var);
 		Array__ctor_m2237513838(L_3, (RuntimeObject*)(RuntimeObject*)L_2, /*hidden argument*/NULL);
 		V_0 = L_3;
-		// array.length--;
 		Array_t201190492 * L_4 = V_0;
 		Array_t201190492 * L_5 = V_0;
 		NullCheck(L_5);
 		int32_t L_6 = Array_get_length_m219024605(L_5, /*hidden argument*/NULL);
 		NullCheck(L_4);
 		Array_set_length_m3735173719(L_4, ((int32_t)il2cpp_codegen_subtract((int32_t)L_6, (int32_t)1)), /*hidden argument*/NULL);
-		// waypoints = array.ToBuiltin(Waypoint) as Waypoint[];
 		Array_t201190492 * L_7 = V_0;
 		RuntimeTypeHandle_t3027515415  L_8 = { reinterpret_cast<intptr_t> (Waypoint_t1614450805_0_0_0_var) };
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
@@ -4717,10 +4531,8 @@ extern "C"  void WaypointsHolder_OnDrawGizmos_m608013696 (WaypointsHolder_t33134
 	}
 	int32_t V_0 = 0;
 	{
-		// Gizmos.color = color;
 		Color_t2555686324  L_0 = __this->get_color_2();
 		Gizmos_set_color_m3399737545(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
-		// if (waypoints.Length > 0)
 		WaypointU5BU5D_t1069915672* L_1 = __this->get_waypoints_3();
 		NullCheck((RuntimeArray *)(RuntimeArray *)L_1);
 		int32_t L_2 = Array_get_Length_m21610649((RuntimeArray *)(RuntimeArray *)L_1, /*hidden argument*/NULL);
@@ -4730,14 +4542,12 @@ extern "C"  void WaypointsHolder_OnDrawGizmos_m608013696 (WaypointsHolder_t33134
 		}
 	}
 	{
-		// for (var i=0; i<(waypoints.Length-1); i++)
 		V_0 = 0;
 		goto IL_00a2;
 	}
 
 IL_0023:
 	{
-		// if (waypoints[i] && waypoints[i+1])
 		WaypointU5BU5D_t1069915672* L_3 = __this->get_waypoints_3();
 		int32_t L_4 = V_0;
 		NullCheck(L_3);
@@ -4764,7 +4574,6 @@ IL_0023:
 		}
 	}
 	{
-		// Gizmos.DrawLine (waypoints[i].gameObject.transform.position, waypoints[i+1].gameObject.transform.position);
 		WaypointU5BU5D_t1069915672* L_13 = __this->get_waypoints_3();
 		int32_t L_14 = V_0;
 		NullCheck(L_13);
@@ -4788,7 +4597,6 @@ IL_0023:
 		NullCheck(L_25);
 		Vector3_t3722313464  L_26 = Transform_get_position_m36019626(L_25, /*hidden argument*/NULL);
 		Gizmos_DrawLine_m3273476787(NULL /*static, unused*/, L_19, L_26, /*hidden argument*/NULL);
-		// if (colorizeWaypoints) waypoints[i+1].color = color;
 		bool L_27 = __this->get_colorizeWaypoints_4();
 		if (!L_27)
 		{
@@ -4796,7 +4604,6 @@ IL_0023:
 		}
 	}
 	{
-		// if (colorizeWaypoints) waypoints[i+1].color = color;
 		WaypointU5BU5D_t1069915672* L_28 = __this->get_waypoints_3();
 		int32_t L_29 = V_0;
 		NullCheck(L_28);
@@ -4809,14 +4616,12 @@ IL_0023:
 
 IL_009e:
 	{
-		// for (var i=0; i<(waypoints.Length-1); i++)
 		int32_t L_33 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add((int32_t)L_33, (int32_t)1));
 	}
 
 IL_00a2:
 	{
-		// for (var i=0; i<(waypoints.Length-1); i++)
 		int32_t L_34 = V_0;
 		WaypointU5BU5D_t1069915672* L_35 = __this->get_waypoints_3();
 		NullCheck((RuntimeArray *)(RuntimeArray *)L_35);

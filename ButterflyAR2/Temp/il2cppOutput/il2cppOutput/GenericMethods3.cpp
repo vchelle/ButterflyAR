@@ -16332,55 +16332,37 @@ extern "C"  void PostProcessingBehaviour_RemoveCommandBuffer_TisRuntimeObject_m4
 	memset(&V_0, 0, sizeof(V_0));
 	Type_t * V_1 = NULL;
 	{
-		// var type = typeof(T);
 		RuntimeTypeHandle_t3027515415  L_0 = { reinterpret_cast<intptr_t> (IL2CPP_RGCTX_TYPE(method->rgctx_data, 0)) };
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
 		Type_t * L_1 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, (RuntimeTypeHandle_t3027515415 )L_0, /*hidden argument*/NULL);
 		V_1 = (Type_t *)L_1;
-		// if (!m_CommandBuffers.TryGetValue(type, out kvp))
 		Dictionary_2_t1572824908 * L_2 = (Dictionary_2_t1572824908 *)__this->get_m_CommandBuffers_4();
 		Type_t * L_3 = V_1;
-		// if (!m_CommandBuffers.TryGetValue(type, out kvp))
 		NullCheck((Dictionary_2_t1572824908 *)L_2);
 		bool L_4 = Dictionary_2_TryGetValue_m3557291920((Dictionary_2_t1572824908 *)L_2, (Type_t *)L_3, (KeyValuePair_2_t3423445140 *)(&V_0), /*hidden argument*/Dictionary_2_TryGetValue_m3557291920_RuntimeMethod_var);
 		if (L_4)
 		{
-			goto IL_0024;
+			goto IL_001f;
 		}
 	}
 	{
-		// return;
-		goto IL_0056;
+		return;
 	}
 
-IL_0024:
+IL_001f:
 	{
-		// m_Camera.RemoveCommandBuffer(kvp.Key, kvp.Value);
 		Camera_t4157153871 * L_5 = (Camera_t4157153871 *)__this->get_m_Camera_10();
-		// m_Camera.RemoveCommandBuffer(kvp.Key, kvp.Value);
 		int32_t L_6 = KeyValuePair_2_get_Key_m648688154((KeyValuePair_2_t3423445140 *)(&V_0), /*hidden argument*/KeyValuePair_2_get_Key_m648688154_RuntimeMethod_var);
-		// m_Camera.RemoveCommandBuffer(kvp.Key, kvp.Value);
 		CommandBuffer_t2206337031 * L_7 = KeyValuePair_2_get_Value_m1482434896((KeyValuePair_2_t3423445140 *)(&V_0), /*hidden argument*/KeyValuePair_2_get_Value_m1482434896_RuntimeMethod_var);
-		// m_Camera.RemoveCommandBuffer(kvp.Key, kvp.Value);
 		NullCheck((Camera_t4157153871 *)L_5);
 		Camera_RemoveCommandBuffer_m773243127((Camera_t4157153871 *)L_5, (int32_t)L_6, (CommandBuffer_t2206337031 *)L_7, /*hidden argument*/NULL);
-		// m_CommandBuffers.Remove(type);
 		Dictionary_2_t1572824908 * L_8 = (Dictionary_2_t1572824908 *)__this->get_m_CommandBuffers_4();
 		Type_t * L_9 = V_1;
-		// m_CommandBuffers.Remove(type);
 		NullCheck((Dictionary_2_t1572824908 *)L_8);
 		Dictionary_2_Remove_m3209254771((Dictionary_2_t1572824908 *)L_8, (Type_t *)L_9, /*hidden argument*/Dictionary_2_Remove_m3209254771_RuntimeMethod_var);
-		// kvp.Value.Dispose();
-		// kvp.Value.Dispose();
 		CommandBuffer_t2206337031 * L_10 = KeyValuePair_2_get_Value_m1482434896((KeyValuePair_2_t3423445140 *)(&V_0), /*hidden argument*/KeyValuePair_2_get_Value_m1482434896_RuntimeMethod_var);
-		// kvp.Value.Dispose();
 		NullCheck((CommandBuffer_t2206337031 *)L_10);
 		CommandBuffer_Dispose_m146760806((CommandBuffer_t2206337031 *)L_10, /*hidden argument*/NULL);
-	}
-
-IL_0056:
-	{
-		// }
 		return;
 	}
 }
@@ -16389,55 +16371,42 @@ extern "C"  void PostProcessingBehaviour_TryExecuteCommandBuffer_TisRuntimeObjec
 {
 	CommandBuffer_t2206337031 * V_0 = NULL;
 	{
-		// if (component.active)
 		PostProcessingComponentCommandBuffer_1_t60440757 * L_0 = ___component0;
-		// if (component.active)
 		NullCheck((PostProcessingComponentBase_t2731103827 *)L_0);
 		bool L_1 = VirtFuncInvoker0< bool >::Invoke(5 /* System.Boolean UnityEngine.PostProcessing.PostProcessingComponentBase::get_active() */, (PostProcessingComponentBase_t2731103827 *)L_0);
 		if (!L_1)
 		{
-			goto IL_0033;
+			goto IL_0030;
 		}
 	}
 	{
-		// var cb = GetCommandBuffer<T>(component.GetCameraEvent(), component.GetName());
 		PostProcessingComponentCommandBuffer_1_t60440757 * L_2 = ___component0;
-		// var cb = GetCommandBuffer<T>(component.GetCameraEvent(), component.GetName());
 		NullCheck((PostProcessingComponentCommandBuffer_1_t60440757 *)L_2);
 		int32_t L_3 = VirtFuncInvoker0< int32_t >::Invoke(10 /* UnityEngine.Rendering.CameraEvent UnityEngine.PostProcessing.PostProcessingComponentCommandBuffer`1<System.Object>::GetCameraEvent() */, (PostProcessingComponentCommandBuffer_1_t60440757 *)L_2);
 		PostProcessingComponentCommandBuffer_1_t60440757 * L_4 = ___component0;
-		// var cb = GetCommandBuffer<T>(component.GetCameraEvent(), component.GetName());
 		NullCheck((PostProcessingComponentCommandBuffer_1_t60440757 *)L_4);
 		String_t* L_5 = VirtFuncInvoker0< String_t* >::Invoke(11 /* System.String UnityEngine.PostProcessing.PostProcessingComponentCommandBuffer`1<System.Object>::GetName() */, (PostProcessingComponentCommandBuffer_1_t60440757 *)L_4);
-		// var cb = GetCommandBuffer<T>(component.GetCameraEvent(), component.GetName());
 		NullCheck((PostProcessingBehaviour_t3229946336 *)__this);
 		CommandBuffer_t2206337031 * L_6 = ((  CommandBuffer_t2206337031 * (*) (PostProcessingBehaviour_t3229946336 *, int32_t, String_t*, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2)->methodPointer)((PostProcessingBehaviour_t3229946336 *)__this, (int32_t)L_3, (String_t*)L_5, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
 		V_0 = (CommandBuffer_t2206337031 *)L_6;
-		// cb.Clear();
 		CommandBuffer_t2206337031 * L_7 = V_0;
-		// cb.Clear();
 		NullCheck((CommandBuffer_t2206337031 *)L_7);
 		CommandBuffer_Clear_m3260707516((CommandBuffer_t2206337031 *)L_7, /*hidden argument*/NULL);
-		// component.PopulateCommandBuffer(cb);
 		PostProcessingComponentCommandBuffer_1_t60440757 * L_8 = ___component0;
 		CommandBuffer_t2206337031 * L_9 = V_0;
-		// component.PopulateCommandBuffer(cb);
 		NullCheck((PostProcessingComponentCommandBuffer_1_t60440757 *)L_8);
 		VirtActionInvoker1< CommandBuffer_t2206337031 * >::Invoke(12 /* System.Void UnityEngine.PostProcessing.PostProcessingComponentCommandBuffer`1<System.Object>::PopulateCommandBuffer(UnityEngine.Rendering.CommandBuffer) */, (PostProcessingComponentCommandBuffer_1_t60440757 *)L_8, (CommandBuffer_t2206337031 *)L_9);
-		goto IL_0039;
+		goto IL_0036;
 	}
 
-IL_0033:
+IL_0030:
 	{
-		// else RemoveCommandBuffer<T>();
-		// else RemoveCommandBuffer<T>();
 		NullCheck((PostProcessingBehaviour_t3229946336 *)__this);
 		((  void (*) (PostProcessingBehaviour_t3229946336 *, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 4)->methodPointer)((PostProcessingBehaviour_t3229946336 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 4));
 	}
 
-IL_0039:
+IL_0036:
 	{
-		// }
 		return;
 	}
 }
@@ -21326,25 +21295,13 @@ extern "C"  RuntimeObject * PostProcessingBehaviour_AddComponent_TisRuntimeObjec
 		il2cpp_codegen_initialize_method (PostProcessingBehaviour_AddComponent_TisRuntimeObject_m4220113493_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	RuntimeObject * V_0 = NULL;
 	{
-		// m_Components.Add(component);
 		List_1_t4203178569 * L_0 = (List_1_t4203178569 *)__this->get_m_Components_5();
 		RuntimeObject * L_1 = ___component0;
-		// m_Components.Add(component);
 		NullCheck((List_1_t4203178569 *)L_0);
 		List_1_Add_m1572460420((List_1_t4203178569 *)L_0, (PostProcessingComponentBase_t2731103827 *)L_1, /*hidden argument*/List_1_Add_m1572460420_RuntimeMethod_var);
-		// return component;
 		RuntimeObject * L_2 = ___component0;
-		V_0 = (RuntimeObject *)L_2;
-		goto IL_0019;
-	}
-
-IL_0019:
-	{
-		// }
-		RuntimeObject * L_3 = V_0;
-		return L_3;
+		return L_2;
 	}
 }
 // T UnityEngine.Resources::GetBuiltinResource<System.Object>(System.String)
@@ -23392,54 +23349,33 @@ extern "C"  CommandBuffer_t2206337031 * PostProcessingBehaviour_AddCommandBuffer
 	CommandBuffer_t2206337031 * V_1 = NULL;
 	KeyValuePair_2_t3423445140  V_2;
 	memset(&V_2, 0, sizeof(V_2));
-	CommandBuffer_t2206337031 * V_3 = NULL;
 	{
-		// var cb = new CommandBuffer { name = name };
 		CommandBuffer_t2206337031 * L_0 = (CommandBuffer_t2206337031 *)il2cpp_codegen_object_new(CommandBuffer_t2206337031_il2cpp_TypeInfo_var);
 		CommandBuffer__ctor_m3028411456(L_0, /*hidden argument*/NULL);
 		V_1 = (CommandBuffer_t2206337031 *)L_0;
-		// var cb = new CommandBuffer { name = name };
 		CommandBuffer_t2206337031 * L_1 = V_1;
 		String_t* L_2 = ___name1;
-		// var cb = new CommandBuffer { name = name };
 		NullCheck((CommandBuffer_t2206337031 *)L_1);
 		CommandBuffer_set_name_m1839128424((CommandBuffer_t2206337031 *)L_1, (String_t*)L_2, /*hidden argument*/NULL);
 		CommandBuffer_t2206337031 * L_3 = V_1;
 		V_0 = (CommandBuffer_t2206337031 *)L_3;
-		// var kvp = new KeyValuePair<CameraEvent, CommandBuffer>(evt, cb);
 		int32_t L_4 = ___evt0;
 		CommandBuffer_t2206337031 * L_5 = V_0;
-		// var kvp = new KeyValuePair<CameraEvent, CommandBuffer>(evt, cb);
 		KeyValuePair_2__ctor_m3432497619((KeyValuePair_2_t3423445140 *)(&V_2), (int32_t)L_4, (CommandBuffer_t2206337031 *)L_5, /*hidden argument*/KeyValuePair_2__ctor_m3432497619_RuntimeMethod_var);
-		// m_CommandBuffers.Add(typeof(T), kvp);
 		Dictionary_2_t1572824908 * L_6 = (Dictionary_2_t1572824908 *)__this->get_m_CommandBuffers_4();
 		RuntimeTypeHandle_t3027515415  L_7 = { reinterpret_cast<intptr_t> (IL2CPP_RGCTX_TYPE(method->rgctx_data, 0)) };
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
 		Type_t * L_8 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, (RuntimeTypeHandle_t3027515415 )L_7, /*hidden argument*/NULL);
 		KeyValuePair_2_t3423445140  L_9 = V_2;
-		// m_CommandBuffers.Add(typeof(T), kvp);
 		NullCheck((Dictionary_2_t1572824908 *)L_6);
 		Dictionary_2_Add_m2470974461((Dictionary_2_t1572824908 *)L_6, (Type_t *)L_8, (KeyValuePair_2_t3423445140 )L_9, /*hidden argument*/Dictionary_2_Add_m2470974461_RuntimeMethod_var);
-		// m_Camera.AddCommandBuffer(evt, kvp.Value);
 		Camera_t4157153871 * L_10 = (Camera_t4157153871 *)__this->get_m_Camera_10();
 		int32_t L_11 = ___evt0;
-		// m_Camera.AddCommandBuffer(evt, kvp.Value);
 		CommandBuffer_t2206337031 * L_12 = KeyValuePair_2_get_Value_m1482434896((KeyValuePair_2_t3423445140 *)(&V_2), /*hidden argument*/KeyValuePair_2_get_Value_m1482434896_RuntimeMethod_var);
-		// m_Camera.AddCommandBuffer(evt, kvp.Value);
 		NullCheck((Camera_t4157153871 *)L_10);
 		Camera_AddCommandBuffer_m1363239337((Camera_t4157153871 *)L_10, (int32_t)L_11, (CommandBuffer_t2206337031 *)L_12, /*hidden argument*/NULL);
-		// return kvp.Value;
-		// return kvp.Value;
 		CommandBuffer_t2206337031 * L_13 = KeyValuePair_2_get_Value_m1482434896((KeyValuePair_2_t3423445140 *)(&V_2), /*hidden argument*/KeyValuePair_2_get_Value_m1482434896_RuntimeMethod_var);
-		V_3 = (CommandBuffer_t2206337031 *)L_13;
-		goto IL_004f;
-	}
-
-IL_004f:
-	{
-		// }
-		CommandBuffer_t2206337031 * L_14 = V_3;
-		return L_14;
+		return L_13;
 	}
 }
 // UnityEngine.Rendering.CommandBuffer UnityEngine.PostProcessing.PostProcessingBehaviour::GetCommandBuffer<System.Object>(UnityEngine.Rendering.CameraEvent,System.String)
@@ -23454,78 +23390,56 @@ extern "C"  CommandBuffer_t2206337031 * PostProcessingBehaviour_GetCommandBuffer
 	CommandBuffer_t2206337031 * V_0 = NULL;
 	KeyValuePair_2_t3423445140  V_1;
 	memset(&V_1, 0, sizeof(V_1));
-	CommandBuffer_t2206337031 * V_2 = NULL;
 	{
-		// if (!m_CommandBuffers.TryGetValue(typeof(T), out kvp))
 		Dictionary_2_t1572824908 * L_0 = (Dictionary_2_t1572824908 *)__this->get_m_CommandBuffers_4();
 		RuntimeTypeHandle_t3027515415  L_1 = { reinterpret_cast<intptr_t> (IL2CPP_RGCTX_TYPE(method->rgctx_data, 0)) };
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
 		Type_t * L_2 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, (RuntimeTypeHandle_t3027515415 )L_1, /*hidden argument*/NULL);
-		// if (!m_CommandBuffers.TryGetValue(typeof(T), out kvp))
 		NullCheck((Dictionary_2_t1572824908 *)L_0);
 		bool L_3 = Dictionary_2_TryGetValue_m3557291920((Dictionary_2_t1572824908 *)L_0, (Type_t *)L_2, (KeyValuePair_2_t3423445140 *)(&V_1), /*hidden argument*/Dictionary_2_TryGetValue_m3557291920_RuntimeMethod_var);
 		if (L_3)
 		{
-			goto IL_002d;
+			goto IL_002a;
 		}
 	}
 	{
-		// cb = AddCommandBuffer<T>(evt, name);
 		int32_t L_4 = ___evt0;
 		String_t* L_5 = ___name1;
-		// cb = AddCommandBuffer<T>(evt, name);
 		NullCheck((PostProcessingBehaviour_t3229946336 *)__this);
 		CommandBuffer_t2206337031 * L_6 = ((  CommandBuffer_t2206337031 * (*) (PostProcessingBehaviour_t3229946336 *, int32_t, String_t*, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->methodPointer)((PostProcessingBehaviour_t3229946336 *)__this, (int32_t)L_4, (String_t*)L_5, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
 		V_0 = (CommandBuffer_t2206337031 *)L_6;
-		goto IL_0058;
+		goto IL_0053;
 	}
 
-IL_002d:
+IL_002a:
 	{
-		// else if (kvp.Key != evt)
-		// else if (kvp.Key != evt)
 		int32_t L_7 = KeyValuePair_2_get_Key_m648688154((KeyValuePair_2_t3423445140 *)(&V_1), /*hidden argument*/KeyValuePair_2_get_Key_m648688154_RuntimeMethod_var);
 		int32_t L_8 = ___evt0;
 		if ((((int32_t)L_7) == ((int32_t)L_8)))
 		{
-			goto IL_0050;
+			goto IL_004b;
 		}
 	}
 	{
-		// RemoveCommandBuffer<T>();
-		// RemoveCommandBuffer<T>();
 		NullCheck((PostProcessingBehaviour_t3229946336 *)__this);
 		((  void (*) (PostProcessingBehaviour_t3229946336 *, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2)->methodPointer)((PostProcessingBehaviour_t3229946336 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
-		// cb = AddCommandBuffer<T>(evt, name);
 		int32_t L_9 = ___evt0;
 		String_t* L_10 = ___name1;
-		// cb = AddCommandBuffer<T>(evt, name);
 		NullCheck((PostProcessingBehaviour_t3229946336 *)__this);
 		CommandBuffer_t2206337031 * L_11 = ((  CommandBuffer_t2206337031 * (*) (PostProcessingBehaviour_t3229946336 *, int32_t, String_t*, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->methodPointer)((PostProcessingBehaviour_t3229946336 *)__this, (int32_t)L_9, (String_t*)L_10, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
 		V_0 = (CommandBuffer_t2206337031 *)L_11;
-		goto IL_0058;
+		goto IL_0053;
 	}
 
-IL_0050:
+IL_004b:
 	{
-		// else cb = kvp.Value;
-		// else cb = kvp.Value;
 		CommandBuffer_t2206337031 * L_12 = KeyValuePair_2_get_Value_m1482434896((KeyValuePair_2_t3423445140 *)(&V_1), /*hidden argument*/KeyValuePair_2_get_Value_m1482434896_RuntimeMethod_var);
 		V_0 = (CommandBuffer_t2206337031 *)L_12;
 	}
 
-IL_0058:
+IL_0053:
 	{
-		// return cb;
 		CommandBuffer_t2206337031 * L_13 = V_0;
-		V_2 = (CommandBuffer_t2206337031 *)L_13;
-		goto IL_005f;
-	}
-
-IL_005f:
-	{
-		// }
-		CommandBuffer_t2206337031 * L_14 = V_2;
-		return L_14;
+		return L_13;
 	}
 }

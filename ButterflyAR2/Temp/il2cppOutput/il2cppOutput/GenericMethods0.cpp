@@ -32175,42 +32175,26 @@ extern "C"  bool PlayableHandle_IsPlayableOfType_TisAnimatorControllerPlayable_t
 // System.Boolean UnityEngine.PostProcessing.PostProcessingBehaviour::TryPrepareUberImageEffect<System.Object>(UnityEngine.PostProcessing.PostProcessingComponentRenderTexture`1<T>,UnityEngine.Material)
 extern "C"  bool PostProcessingBehaviour_TryPrepareUberImageEffect_TisRuntimeObject_m969063268_gshared (PostProcessingBehaviour_t3229946336 * __this, PostProcessingComponentRenderTexture_1_t353423909 * ___component0, Material_t340375123 * ___material1, const RuntimeMethod* method)
 {
-	bool V_0 = false;
 	{
-		// if (!component.active)
 		PostProcessingComponentRenderTexture_1_t353423909 * L_0 = ___component0;
-		// if (!component.active)
 		NullCheck((PostProcessingComponentBase_t2731103827 *)L_0);
 		bool L_1 = VirtFuncInvoker0< bool >::Invoke(5 /* System.Boolean UnityEngine.PostProcessing.PostProcessingComponentBase::get_active() */, (PostProcessingComponentBase_t2731103827 *)L_0);
 		if (L_1)
 		{
-			goto IL_0013;
+			goto IL_000d;
 		}
 	}
 	{
-		// return false;
-		V_0 = (bool)0;
-		goto IL_0021;
+		return (bool)0;
 	}
 
-IL_0013:
+IL_000d:
 	{
-		// component.Prepare(material);
 		PostProcessingComponentRenderTexture_1_t353423909 * L_2 = ___component0;
 		Material_t340375123 * L_3 = ___material1;
-		// component.Prepare(material);
 		NullCheck((PostProcessingComponentRenderTexture_1_t353423909 *)L_2);
 		VirtActionInvoker1< Material_t340375123 * >::Invoke(10 /* System.Void UnityEngine.PostProcessing.PostProcessingComponentRenderTexture`1<System.Object>::Prepare(UnityEngine.Material) */, (PostProcessingComponentRenderTexture_1_t353423909 *)L_2, (Material_t340375123 *)L_3);
-		// return true;
-		V_0 = (bool)1;
-		goto IL_0021;
-	}
-
-IL_0021:
-	{
-		// }
-		bool L_4 = V_0;
-		return L_4;
+		return (bool)1;
 	}
 }
 // System.Boolean UnityEngine.UI.SetPropertyUtility::SetClass<System.Object>(T&,T)
